@@ -61,8 +61,6 @@ Duplicate 6-tags, rename it 100-textures, and open it. Create a new instance of 
 Free Texture Sources:
 
 [textures.com](https://www.textures.com/) 
-
 [texturex.com](https://www.texturex.com/) 
-
 [Unity Asset Store](https://assetstore.unity.com/?orderBy=1) 
 
