@@ -60,7 +60,9 @@ Duplicate 5-more_colors, rename it 6-tags, and open it. Add a tag to all Ball ob
 Duplicate 6-tags, rename it 100-textures, and open it. Create a new instance of Ball named Textured Ball and add a texture to it. Your texture asset should be in a folder named Textures and your new material should be called ball-texture.
 Free Texture Sources:
 
-[textures.com](https://www.textures.com/) 
-[texturex.com](https://www.texturex.com/) 
+[textures.com](https://www.textures.com/)
+
+[texturex.com](https://www.texturex.com/)
+ 
 [Unity Asset Store](https://assetstore.unity.com/?orderBy=1) 
 
