@@ -9,11 +9,7 @@ public class MainMenu : MonoBehaviour
     // Public Variables ==============================================================
     //================================================================================
     public Button playButton;
-    public Button optionsButton;
-    public Button backButton;
     public Button quitButton;
-    public GameObject mainMenu;
-    public GameObject optionMenu;
 
     //================================================================================
     // Private Variables =============================================================

@@ -32,8 +32,8 @@ Splash Image:
 #### Task 2. Build Settings
 Scenes in Build:
 
-i. menu
-ii. maze
+* menu
+* maze
 
 Create three builds of the maze in a directory called Builds in the root of your project folder (not inside the Assets folder).
 
