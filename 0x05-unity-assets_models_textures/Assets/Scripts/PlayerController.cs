@@ -11,12 +11,13 @@ public class PlayerController : MonoBehaviour
     public float jumpHeight = 5.0f;
 
     //================================================================================
-    // Private Variables ==============================================================
+    // Private Variables =============================================================
     //================================================================================
-    private CharacterController pController;
-    private Vector3 playerVelocity;
     private bool groundPlayer;
+    private CharacterController pController;
     private float gravityValue;
+    private Vector3 playerVelocity;
+
 
 
     //================================================================================
@@ -33,15 +34,18 @@ public class PlayerController : MonoBehaviour
     //================================================================================
     void FixedUpdate()
     {
+ 
+        // Check if player is grounded
         groundPlayer = pController.isGrounded;
         if (groundPlayer && playerVelocity.y < 0)
         {
             playerVelocity.y = 0.0f;
         }
-    
+
+
+        // Player Movement
         Vector3 move = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
         //pController.Move(Camera.main.transform.TransformDirection(move * Time.deltaTime * playerSpeed));
-        
         pController.Move(move * playerSpeed * Time.deltaTime);
 
         if (move != Vector3.zero)
