@@ -1,6 +1,5 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
+using UnityEngine.UI;
 
 public class Timer : MonoBehaviour
 {
@@ -8,28 +7,37 @@ public class Timer : MonoBehaviour
     // Public Variables ==============================================================
     //================================================================================
 
-    
-    
+    public Text stopWatch;
 
     //================================================================================
     // Private Variables =============================================================
     //================================================================================
 
+    private float startTime;
+
+    
 
     //================================================================================
     // Start is called before the first frame update =================================
     //================================================================================
     void Start()
     {
-        
+        startTime = Time.time;
+
     }
 
     //================================================================================
     // Update is called once per frame ===============================================
     //================================================================================
-    void Update()
+    void FixedUpdate()
     {
-        
+        float timerControl = Time.time - startTime;
+        string mins = ((int)timerControl / 60).ToString("00");
+        string segs = (timerControl % 60).ToString("00");
+        string miliSeg = ((timerControl * 100) % 100).ToString("00");
+
+        string timerString = string.Format ("{00}:{01}:{02}", mins, segs, miliSeg);
+        stopWatch.text = timerString;
     }
 
     //================================================================================
