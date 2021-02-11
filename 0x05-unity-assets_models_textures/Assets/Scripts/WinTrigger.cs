@@ -2,8 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-
-public class TimerTrigger : MonoBehaviour
+public class WinTrigger : MonoBehaviour
 {
 
 	//================================================================================
@@ -21,6 +20,7 @@ public class TimerTrigger : MonoBehaviour
 	//================================================================================
 	void Start()
 	{
+		
 
 	}
 
@@ -40,12 +40,13 @@ public class TimerTrigger : MonoBehaviour
 	//================================================================================    
 	// Functions =====================================================================
 	//================================================================================
-	void OnTriggerExit(Collider other)
+	void OnTriggerEnter(Collider other)
 	{
 		if (other.CompareTag("Player"))
 		{
-			other.GetComponent<Timer>().enabled = true;
+			other.GetComponent<Timer>().SetTimerValue(true, true);
 		}
+
 	}
 
 }

@@ -12,17 +12,14 @@ public class Timer : MonoBehaviour
     //================================================================================
     // Private Variables =============================================================
     //================================================================================
-
-    private float startTime;
-
-    
+    private bool finished = false;
+    private float timernum = 0;
 
     //================================================================================
     // Start is called before the first frame update =================================
     //================================================================================
     void Start()
     {
-        startTime = Time.time;
 
     }
 
@@ -31,13 +28,12 @@ public class Timer : MonoBehaviour
     //================================================================================
     void FixedUpdate()
     {
-        float timerControl = Time.time - startTime;
-        string mins = ((int)timerControl / 60).ToString("00");
-        string segs = (timerControl % 60).ToString("00");
-        string miliSeg = ((timerControl * 100) % 100).ToString("00");
+        if (!finished)
+            timernum += Time.deltaTime;
 
-        string timerString = string.Format ("{00}:{01}:{02}", mins, segs, miliSeg);
-        stopWatch.text = timerString;
+        float mins = Mathf.FloorToInt(timernum / 60);
+        float segs = timernum % 60;
+        stopWatch.text = string.Format("{0:00}:{1:00.00}", mins, segs);
     }
 
     //================================================================================
@@ -47,6 +43,14 @@ public class Timer : MonoBehaviour
     //================================================================================
     // Functions =====================================================================
     //================================================================================
+    public void SetTimerValue(bool value, bool colorChange)
+    {
+        finished = value;
+        if (colorChange)
+        {
+            stopWatch.color = Color.green;
+            stopWatch.fontSize = 60;
+        }
 
-
+    }
 }

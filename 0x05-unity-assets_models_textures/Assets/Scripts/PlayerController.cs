@@ -1,5 +1,5 @@
 ﻿using UnityEngine;
-
+using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
@@ -8,7 +8,9 @@ public class PlayerController : MonoBehaviour
     //================================================================================
 
     public float playerSpeed = 10.0f;
-    public float jumpHeight = 5.0f;
+    public float jumpHeight = 2.0f;
+    //public Timer crono;
+    public Transform cam;
 
     //================================================================================
     // Private Variables =============================================================
@@ -17,8 +19,6 @@ public class PlayerController : MonoBehaviour
     private CharacterController pController;
     private float gravityValue;
     private Vector3 playerVelocity;
-
-
 
     //================================================================================
     // Start is called before the first frame update =================================
@@ -44,9 +44,15 @@ public class PlayerController : MonoBehaviour
 
 
         // Player Movement
-        Vector3 move = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
-        //pController.Move(Camera.main.transform.TransformDirection(move * Time.deltaTime * playerSpeed));
-        pController.Move(move * playerSpeed * Time.deltaTime);
+        Vector3 move = new Vector3(Input.GetAxisRaw("Horizontal"), 0f, Input.GetAxisRaw("Vertical")).normalized;
+        if (move.magnitude >= 0.1f)
+        {
+            float angle = Mathf.Atan2(move.x, move.z) * Mathf.Rad2Deg + cam.eulerAngles.y;
+            transform.rotation = Quaternion.Euler(0f, angle, 0f);
+            Vector3 movedir = Quaternion.Euler(0f, angle, 0f) * Vector3.forward;
+            pController.Move(movedir.normalized * playerSpeed * Time.deltaTime);
+        }
+
 
         if (move != Vector3.zero)
         {
@@ -77,6 +83,5 @@ public class PlayerController : MonoBehaviour
     //================================================================================
     // Functions =====================================================================
     //================================================================================
-
 
 }

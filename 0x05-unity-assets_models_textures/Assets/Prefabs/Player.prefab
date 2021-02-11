@@ -145,7 +145,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerSpeed: 10
-  jumpHeight: 2
+  jumpHeight: 5
 --- !u!114 &7928087440158896755
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -158,3 +158,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3e951a7684a5714f929c8a2ee2dff56, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  stopWatch: {fileID: 0}
