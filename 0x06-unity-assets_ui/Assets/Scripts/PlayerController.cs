@@ -11,6 +11,7 @@ public class PlayerController : MonoBehaviour
     public float jumpHeight = 2.0f;
     //public Timer crono;
     public Transform cam;
+    public int invertedY = 1;
 
     //================================================================================
     // Private Variables =============================================================
@@ -44,7 +45,7 @@ public class PlayerController : MonoBehaviour
 
 
         // Player Movement
-        Vector3 move = new Vector3(Input.GetAxisRaw("Horizontal"), 0f, Input.GetAxisRaw("Vertical")).normalized;
+        Vector3 move = new Vector3(Input.GetAxisRaw("Horizontal"), 0f, Input.GetAxisRaw("Vertical") * invertedY).normalized;
         if (move.magnitude >= 0.1f)
         {
             float angle = Mathf.Atan2(move.x, move.z) * Mathf.Rad2Deg + cam.eulerAngles.y;
@@ -84,4 +85,8 @@ public class PlayerController : MonoBehaviour
     // Functions =====================================================================
     //================================================================================
 
+    public void invertYAxis()
+    {
+        invertedY = -1;
+    }
 }
