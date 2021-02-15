@@ -6,7 +6,7 @@ We’ll be adding on to the last project to add a menu and UI (see [example](https
 
 Create two more Scenes in 0x06-unity-assets_ui. For each new scene, create a new path of platforms for the Player to navigate through.
 
-[![Foo](https://holbertonintranet.s3.amazonaws.com/uploads/medias/2018/5/6779afbc3e993c547ca0.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIARDDGGGOUWMNL5ANN%2F20210215%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20210215T184239Z&X-Amz-Expires=86400&X-Amz-SignedHeaders=host&X-Amz-Signature=be7357621dfe45b9d8c6a7c27d07775d29936c114d174f84431a1fbf8fee355c)](http://google.com.au/)
+[![Lvl2](https://holbertonintranet.s3.amazonaws.com/uploads/medias/2018/5/6779afbc3e993c547ca0.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIARDDGGGOUWMNL5ANN%2F20210215%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20210215T184239Z&X-Amz-Expires=86400&X-Amz-SignedHeaders=host&X-Amz-Signature=be7357621dfe45b9d8c6a7c27d07775d29936c114d174f84431a1fbf8fee355c)](https://holbertonintranet.s3.amazonaws.com/uploads/medias/2018/5/6779afbc3e993c547ca0.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIARDDGGGOUWMNL5ANN%2F20210215%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20210215T184239Z&X-Amz-Expires=86400&X-Amz-SignedHeaders=host&X-Amz-Signature=be7357621dfe45b9d8c6a7c27d07775d29936c114d174f84431a1fbf8fee355c)
 
 ## Credits
 Skyboxes: [Farland Skies - Cloudy Crown](https://assetstore.unity.com/packages/2d/textures-materials/sky/farland-skies-cloudy-crown-60004)
