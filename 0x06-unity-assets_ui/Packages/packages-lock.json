@@ -1,5 +1,17 @@
 {
   "dependencies": {
+    "com.unity.2d.sprite": {
+      "version": "file:F:/HOLBERTON/AR-VR/Unity/2019.4.17f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.2d.sprite",
+      "depth": 0,
+      "source": "local",
+      "dependencies": {}
+    },
+    "com.unity.2d.tilemap": {
+      "version": "file:F:/HOLBERTON/AR-VR/Unity/2019.4.17f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.2d.tilemap",
+      "depth": 0,
+      "source": "local",
+      "dependencies": {}
+    },
     "com.unity.collab-proxy": {
       "version": "1.2.16",
       "depth": 0,
