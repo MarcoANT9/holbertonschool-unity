@@ -6,6 +6,7 @@ public class CameraController : MonoBehaviour
     //================================================================================
     // Public Variables ==============================================================
     //================================================================================
+    public int invertedY = 1;
     public Transform target;
 
     //================================================================================
@@ -16,6 +17,7 @@ public class CameraController : MonoBehaviour
     private Quaternion rotation;
     private Vector3 cameraRotation;
     private Vector3 offset = new Vector3(0f, 2.5f, -6.25f);
+
 
 
     //================================================================================
@@ -33,7 +35,7 @@ public class CameraController : MonoBehaviour
     void FixedUpdate()
     {
         rotation = Quaternion.identity;
-        rotation = Quaternion.AngleAxis(Input.GetAxis("Mouse Y") * vert_speed * Time.deltaTime, Vector3.right);
+        rotation = Quaternion.AngleAxis(Input.GetAxis("Mouse Y") * vert_speed * Time.deltaTime * invertedY, Vector3.right);
         offset = rotation * offset;
         transform.position = target.position + offset;
 
@@ -58,6 +60,11 @@ public class CameraController : MonoBehaviour
             target = t;
         else
             Debug.LogError("Men comportsese");
+    }
+
+        public void invertYAxis()
+    {
+        invertedY = -1;
     }
 
 }

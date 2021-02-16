@@ -15,8 +15,8 @@ public class MainMenu : MonoBehaviour
     public Button level01;
     public Button level02;
     public Button level03;
-    public GameObject player;
-    public Toggle invertY;
+    public Button options;
+    public Button exitGame;
 
     //================================================================================
     // Private Variables =============================================================
@@ -28,9 +28,9 @@ public class MainMenu : MonoBehaviour
     //================================================================================
     void Start()
     {
-        level01.onClick.AddListener(Playlvl1);
-        level02.onClick.AddListener(Playlvl2);
-        level03.onClick.AddListener(Playlvl3);
+        //level01.onClick.AddListener(Playlvl1);
+        //level02.onClick.AddListener(Playlvl2);
+        //level03.onClick.AddListener(Playlvl3);
 
     }
 
@@ -54,32 +54,26 @@ public class MainMenu : MonoBehaviour
     public void Playlvl1()
     {
         SceneManager.LoadScene("Level01");
-        if (invertY.isOn)
-        {
-            player.GetComponent<PlayerController>().invertYAxis();
-        }
-
     }
 
     public void Playlvl2()
     {
         SceneManager.LoadScene("Level02");
-        if (invertY.isOn)
-        {
-            player.GetComponent<PlayerController>().invertYAxis();
-        }
-
     }
 
     public void Playlvl3()
     {
         SceneManager.LoadScene("Level03");
-        if (invertY.isOn)
-        {
-            player.GetComponent<PlayerController>().invertYAxis();
-        }
-
     }
 
+    public void OptionsMenu()
+    {
+        SceneManager.LoadScene("Options");
+    }
 
+    public void QuitGame()
+    {
+        Debug.Log("Exited");
+        Application.Quit();
+    }
 }
