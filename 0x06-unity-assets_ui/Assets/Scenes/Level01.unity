@@ -15889,7 +15889,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3abec32d1fb0b7479348626ceb5b42f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  invertedY: 1
+  isInverted: 0
   target: {fileID: 524027011}
 --- !u!1001 &970249639
 PrefabInstance:
@@ -22815,6 +22815,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PauseCanvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 6477420061155337413, guid: f17843f2e4594f049ae98c16db7c4c4a,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6477420061155337433, guid: f17843f2e4594f049ae98c16db7c4c4a,
         type: 3}
