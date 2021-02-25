@@ -18,7 +18,7 @@ GameObject:
   - component: {fileID: 7928087440158896755}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -145,7 +145,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerSpeed: 10
-  jumpHeight: 5
+  jumpHeight: 2
+  cam: {fileID: 0}
 --- !u!114 &7928087440158896755
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -153,9 +154,10 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5791248197017790314}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f3e951a7684a5714f929c8a2ee2dff56, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   stopWatch: {fileID: 0}
+  finalTime: {fileID: 0}

@@ -6,12 +6,12 @@ public class CameraController : MonoBehaviour
     //================================================================================
     // Public Variables ==============================================================
     //================================================================================
-    public bool isInverted;
     public Transform target;
 
     //================================================================================
     // Private Variables ==============================================================
     //================================================================================
+    private bool isInverted;
     private const float turn_speed = 150f;
     private const float vert_speed = 150f;
     //private int inverted = 1;
@@ -28,6 +28,10 @@ public class CameraController : MonoBehaviour
 
     {
         setCameraTarget(target);
+        if (PlayerPrefs.GetInt("isInverted") == 1)
+            isInverted = true;
+        else
+            isInverted = false;
     }
 
     //================================================================================
@@ -35,6 +39,7 @@ public class CameraController : MonoBehaviour
     //================================================================================
     void FixedUpdate()
     {
+        // Vertical Movement
         rotation = Quaternion.identity;
         if (isInverted)
             rotation = Quaternion.AngleAxis(-Input.GetAxis("Mouse Y") * vert_speed * Time.deltaTime, Vector3.right);
@@ -43,6 +48,7 @@ public class CameraController : MonoBehaviour
         offset = rotation * offset;
         transform.position = target.position + offset;
 
+        // Horizontal Movement
         if (Input.GetKey(KeyCode.Mouse1))
             rotation = Quaternion.AngleAxis(-Input.GetAxis("Mouse X") * turn_speed * Time.deltaTime, Vector3.up);
         else

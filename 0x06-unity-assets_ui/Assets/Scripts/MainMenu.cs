@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
@@ -21,7 +19,6 @@ public class MainMenu : MonoBehaviour
     //================================================================================
     // Private Variables =============================================================
     //================================================================================
-
 
     //================================================================================
     // Start is called before the first frame update =================================
@@ -68,6 +65,7 @@ public class MainMenu : MonoBehaviour
 
     public void OptionsMenu()
     {
+        PlayerPrefs.SetString("lastScene", SceneManager.GetActiveScene().name);
         SceneManager.LoadScene("Options");
     }
 

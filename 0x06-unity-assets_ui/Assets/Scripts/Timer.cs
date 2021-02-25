@@ -8,6 +8,7 @@ public class Timer : MonoBehaviour
     //================================================================================
 
     public Text stopWatch;
+    public Text finalTime;
 
     //================================================================================
     // Private Variables =============================================================
@@ -51,6 +52,10 @@ public class Timer : MonoBehaviour
             stopWatch.color = Color.green;
             stopWatch.fontSize = 60;
         }
+    }
 
+    public void Win()
+    {
+        finalTime.text = stopWatch.text;
     }
 }

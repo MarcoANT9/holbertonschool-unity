@@ -1,18 +1,13 @@
 ﻿using UnityEngine;
-using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
-public class OptionsMenu : MonoBehaviour
+public class WinMenu : MonoBehaviour
 {
 
 	//================================================================================
 	// Public Variables ==============================================================
 	//================================================================================
-	public Button backButton;
-	public Button applyButton;
-	public Slider bgmSlider;
-	public Slider sfxSlider;
-	public Toggle invertYAxis;
 
 	//================================================================================
 	// Private Variables =============================================================
@@ -24,7 +19,7 @@ public class OptionsMenu : MonoBehaviour
 	//================================================================================
 	void Start()
 	{
-
+		PlayerPrefs.SetInt("currentScene", SceneManager.GetActiveScene().buildIndex);
 	}
 
 	//================================================================================
@@ -43,22 +38,17 @@ public class OptionsMenu : MonoBehaviour
 	//================================================================================    
 	// Functions =====================================================================
 	//================================================================================
-
-	public void Back()
+	public void MainMenu()
 	{
-		if (invertYAxis.isOn)
-			invertYAxis.isOn = false;
-		SceneManager.LoadScene(PlayerPrefs.GetString("lastScene"));
+		SceneManager.LoadScene("MainMenu");
 	}
 
-	public void Apply()
+	public void Next()
 	{
-		if (invertYAxis.isOn)
-			PlayerPrefs.SetInt("isInverted", 1);
+		if (PlayerPrefs.GetInt("currentScene") < 3)
+			SceneManager.LoadScene(PlayerPrefs.GetInt("currentScene") + 1);
 		else
-			PlayerPrefs.SetInt("isInverted", 0);
-		
-		SceneManager.LoadScene(PlayerPrefs.GetString("lastScene"));
+			SceneManager.LoadScene(0);
 	}
 
 }

@@ -1,18 +1,13 @@
 ﻿using UnityEngine;
-using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-public class OptionsMenu : MonoBehaviour
+public class PauseMenu : MonoBehaviour
 {
 
 	//================================================================================
 	// Public Variables ==============================================================
 	//================================================================================
-	public Button backButton;
-	public Button applyButton;
-	public Slider bgmSlider;
-	public Slider sfxSlider;
-	public Toggle invertYAxis;
+	public GameObject pauseCanvas;
 
 	//================================================================================
 	// Private Variables =============================================================
@@ -24,6 +19,7 @@ public class OptionsMenu : MonoBehaviour
 	//================================================================================
 	void Start()
 	{
+		
 
 	}
 
@@ -32,7 +28,18 @@ public class OptionsMenu : MonoBehaviour
 	//================================================================================
 	void Update()
 	{
-		
+		if (Input.GetKeyDown(KeyCode.Escape))
+		{
+			if (pauseCanvas.activeSelf == true)
+			{
+				Resume();
+			}
+			else
+			{
+				Pause();
+			}
+		}
+
 	}
 
 	//================================================================================
@@ -43,22 +50,35 @@ public class OptionsMenu : MonoBehaviour
 	//================================================================================    
 	// Functions =====================================================================
 	//================================================================================
-
-	public void Back()
+	public void Pause()
 	{
-		if (invertYAxis.isOn)
-			invertYAxis.isOn = false;
-		SceneManager.LoadScene(PlayerPrefs.GetString("lastScene"));
+		Time.timeScale = 0;
+		pauseCanvas.SetActive(true);
+		
 	}
 
-	public void Apply()
+	public void Resume()
 	{
-		if (invertYAxis.isOn)
-			PlayerPrefs.SetInt("isInverted", 1);
-		else
-			PlayerPrefs.SetInt("isInverted", 0);
+		Time.timeScale = 1;
+		pauseCanvas.SetActive(false);
 		
-		SceneManager.LoadScene(PlayerPrefs.GetString("lastScene"));
+	}
+
+	public void Restart()
+	{
+		Time.timeScale = 1;
+		SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+	}
+
+	public void Options()
+	{
+		PlayerPrefs.SetString("lastScene", SceneManager.GetActiveScene().name);
+		SceneManager.LoadScene("Options");
+	}
+
+	public void MainMenu()
+	{
+		SceneManager.LoadScene("MainMenu");
 	}
 
 }
