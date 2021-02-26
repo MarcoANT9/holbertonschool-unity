@@ -25,10 +25,7 @@ public class MainMenu : MonoBehaviour
     //================================================================================
     void Start()
     {
-        //level01.onClick.AddListener(Playlvl1);
-        //level02.onClick.AddListener(Playlvl2);
-        //level03.onClick.AddListener(Playlvl3);
-
+        Time.timeScale = 1;
     }
 
     //================================================================================
