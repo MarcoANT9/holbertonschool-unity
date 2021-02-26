@@ -45,7 +45,7 @@ public class WinMenu : MonoBehaviour
 
 	public void Next()
 	{
-		if (PlayerPrefs.GetInt("currentScene") < 3)
+		if (PlayerPrefs.GetInt("currentScene") < 4)
 			SceneManager.LoadScene(PlayerPrefs.GetInt("currentScene") + 1);
 		else
 			SceneManager.LoadScene(0);
