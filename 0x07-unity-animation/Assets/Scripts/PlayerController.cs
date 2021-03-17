@@ -33,7 +33,6 @@ public class PlayerController : MonoBehaviour
     //================================================================================
     void FixedUpdate()
     {
- 
         // Check if player is grounded
         groundPlayer = pController.isGrounded;
         if (groundPlayer && playerVelocity.y < 0)
