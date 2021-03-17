@@ -13766,6 +13766,20 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 5791248196269754788}
   m_PrefabAsset: {fileID: 0}
+--- !u!136 &728561579
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 728561571}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.5
+  m_Height: 1
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &728786556
 GameObject:
   m_ObjectHideFlags: 0
@@ -23101,20 +23115,15 @@ PrefabInstance:
       propertyPath: m_WarningMessage
       value: 
       objectReference: {fileID: 0}
-    - target: {fileID: 86747227765673455, guid: 3e34f56d5a79f34469d2e6ce682ac839,
-        type: 3}
-      propertyPath: m_ApplyRootMotion
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 1093912450150667998, guid: 3e34f56d5a79f34469d2e6ce682ac839,
         type: 3}
       propertyPath: m_Height
-      value: 0.6963474
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 1093912450150667998, guid: 3e34f56d5a79f34469d2e6ce682ac839,
         type: 3}
-      propertyPath: m_Enabled
-      value: 1
+      propertyPath: m_Radius
+      value: 0.8
       objectReference: {fileID: 0}
     - target: {fileID: 2308897528424336273, guid: 3e34f56d5a79f34469d2e6ce682ac839,
         type: 3}
@@ -23134,32 +23143,7 @@ PrefabInstance:
     - target: {fileID: 5791248197017790315, guid: 3e34f56d5a79f34469d2e6ce682ac839,
         type: 3}
       propertyPath: m_Height
-      value: 2.1673605
-      objectReference: {fileID: 0}
-    - target: {fileID: 5791248197017790315, guid: 3e34f56d5a79f34469d2e6ce682ac839,
-        type: 3}
-      propertyPath: m_Radius
-      value: 0.29378498
-      objectReference: {fileID: 0}
-    - target: {fileID: 5791248197017790315, guid: 3e34f56d5a79f34469d2e6ce682ac839,
-        type: 3}
-      propertyPath: m_Enabled
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5791248197017790315, guid: 3e34f56d5a79f34469d2e6ce682ac839,
-        type: 3}
-      propertyPath: m_Center.y
-      value: 0.9527286
-      objectReference: {fileID: 0}
-    - target: {fileID: 5791248197017790315, guid: 3e34f56d5a79f34469d2e6ce682ac839,
-        type: 3}
-      propertyPath: m_Center.z
-      value: 0.011789799
-      objectReference: {fileID: 0}
-    - target: {fileID: 5791248197017790324, guid: 3e34f56d5a79f34469d2e6ce682ac839,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5791248197017790326, guid: 3e34f56d5a79f34469d2e6ce682ac839,
         type: 3}
