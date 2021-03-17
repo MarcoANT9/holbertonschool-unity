@@ -10,6 +10,7 @@ public class PlayerController : MonoBehaviour
     public float playerSpeed = 10.0f;
     public float jumpHeight = 2.0f;
     public Transform cam;
+    public GameObject ty;
 
     //================================================================================
     // Private Variables =============================================================
@@ -45,18 +46,20 @@ public class PlayerController : MonoBehaviour
         Vector3 move = new Vector3(Input.GetAxisRaw("Horizontal"), 0f, Input.GetAxisRaw("Vertical")).normalized;
         if (move.magnitude >= 0.1f)
         {
-            float angle = Mathf.Atan2(move.x, move.z) * Mathf.Rad2Deg + cam.eulerAngles.y;
-            transform.rotation = Quaternion.Euler(0f, angle, 0f);
-            Vector3 movedir = Quaternion.Euler(0f, angle, 0f) * Vector3.forward;
-            pController.Move(movedir.normalized * playerSpeed * Time.deltaTime);
+            //float angle = Mathf.Atan2(move.x, move.z) * Mathf.Rad2Deg + cam.eulerAngles.y;
+            //transform.rotation = Quaternion.Euler(0f, angle, 0f);
+            //Vector3 movedir = Quaternion.Euler(0f, angle, 0f) * Vector3.forward;
+            ty.GetComponent<Animator>().SetBool("isRunning", true);
+            pController.Move(move.normalized * playerSpeed * Time.deltaTime);
         }
-
+        else
+            ty.GetComponent<Animator>().SetBool("isRunning", false);
 
         if (move != Vector3.zero)
         {
             gameObject.transform.forward = move;
-
         }
+
 
         if (transform.position.y < 0)
             gravityValue = -5.1f;

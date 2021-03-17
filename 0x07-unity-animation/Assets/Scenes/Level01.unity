@@ -17787,6 +17787,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ab14c898eaf012f4b95344ca5446db48, type: 3}
+--- !u!1 &1227122104 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6674277872589638959, guid: 3e34f56d5a79f34469d2e6ce682ac839,
+    type: 3}
+  m_PrefabInstance: {fileID: 5791248196269754788}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1234035199
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -23090,6 +23096,22 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: bf1d5b4b8b2c6064f8d6a988ddff99e5, type: 2}
+    - target: {fileID: 86747227765673455, guid: 3e34f56d5a79f34469d2e6ce682ac839,
+        type: 3}
+      propertyPath: m_WarningMessage
+      value: "\nBinding warning: Some generic clip(s) animate transforms that are
+        already bound by a Humanoid avatar. These transforms can only be changed
+        by Humanoid clips.\n\tTransform 'Boy:Hips'\n\tTransform 'Boy:LeftArm'\n\tTransform
+        'Boy:RightHandRing1'\n\tTransform 'Boy:RightHandThumb1'\n\tTransform 'Boy:LeftHandRing2'\n\tTransform
+        'Boy:Head'\n\tTransform 'Boy:LeftHandPinky2'\n\tTransform 'Boy:RightHandIndex2'\n\tTransform
+        'Boy:RightArm'\n\tTransform 'Boy:RightUpLeg'\n\tand more ...\n\tFrom animation
+        clip 'Running'"
+      objectReference: {fileID: 0}
+    - target: {fileID: 2308897528424336273, guid: 3e34f56d5a79f34469d2e6ce682ac839,
+        type: 3}
+      propertyPath: ty
+      value: 
+      objectReference: {fileID: 1227122104}
     - target: {fileID: 2308897528424336273, guid: 3e34f56d5a79f34469d2e6ce682ac839,
         type: 3}
       propertyPath: cam
