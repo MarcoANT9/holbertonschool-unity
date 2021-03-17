@@ -49,10 +49,12 @@ public class PlayerController : MonoBehaviour
             //float angle = Mathf.Atan2(move.x, move.z) * Mathf.Rad2Deg + cam.eulerAngles.y;
             //transform.rotation = Quaternion.Euler(0f, angle, 0f);
             //Vector3 movedir = Quaternion.Euler(0f, angle, 0f) * Vector3.forward;
+            //Running Animation Play
             ty.GetComponent<Animator>().SetBool("isRunning", true);
             pController.Move(move.normalized * playerSpeed * Time.deltaTime);
         }
         else
+            //Running Animation Stop
             ty.GetComponent<Animator>().SetBool("isRunning", false);
 
         if (move != Vector3.zero)
@@ -67,7 +69,14 @@ public class PlayerController : MonoBehaviour
             gravityValue = -9.81f;
 
         if (Input.GetKey("space") && groundPlayer)
+        {
+            ty.GetComponent<Animator>().SetBool("isJumping", true);
             playerVelocity.y += Mathf.Sqrt(jumpHeight * -3.0f * gravityValue);
+            //Jumping Animation play
+        }
+        else
+            //Jumping Animation Stop
+            ty.GetComponent<Animator>().SetBool("isJumping", false);
 
         playerVelocity.y += gravityValue * Time.deltaTime;
         pController.Move(playerVelocity * Time.deltaTime);

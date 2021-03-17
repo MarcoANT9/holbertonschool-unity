@@ -23099,13 +23099,22 @@ PrefabInstance:
     - target: {fileID: 86747227765673455, guid: 3e34f56d5a79f34469d2e6ce682ac839,
         type: 3}
       propertyPath: m_WarningMessage
-      value: "\nBinding warning: Some generic clip(s) animate transforms that are
-        already bound by a Humanoid avatar. These transforms can only be changed
-        by Humanoid clips.\n\tTransform 'Boy:Hips'\n\tTransform 'Boy:LeftArm'\n\tTransform
-        'Boy:RightHandRing1'\n\tTransform 'Boy:RightHandThumb1'\n\tTransform 'Boy:LeftHandRing2'\n\tTransform
-        'Boy:Head'\n\tTransform 'Boy:LeftHandPinky2'\n\tTransform 'Boy:RightHandIndex2'\n\tTransform
-        'Boy:RightArm'\n\tTransform 'Boy:RightUpLeg'\n\tand more ...\n\tFrom animation
-        clip 'Running'"
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 86747227765673455, guid: 3e34f56d5a79f34469d2e6ce682ac839,
+        type: 3}
+      propertyPath: m_ApplyRootMotion
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1093912450150667998, guid: 3e34f56d5a79f34469d2e6ce682ac839,
+        type: 3}
+      propertyPath: m_Height
+      value: 0.6963474
+      objectReference: {fileID: 0}
+    - target: {fileID: 1093912450150667998, guid: 3e34f56d5a79f34469d2e6ce682ac839,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2308897528424336273, guid: 3e34f56d5a79f34469d2e6ce682ac839,
         type: 3}
@@ -23125,7 +23134,32 @@ PrefabInstance:
     - target: {fileID: 5791248197017790315, guid: 3e34f56d5a79f34469d2e6ce682ac839,
         type: 3}
       propertyPath: m_Height
+      value: 2.1673605
+      objectReference: {fileID: 0}
+    - target: {fileID: 5791248197017790315, guid: 3e34f56d5a79f34469d2e6ce682ac839,
+        type: 3}
+      propertyPath: m_Radius
+      value: 0.29378498
+      objectReference: {fileID: 0}
+    - target: {fileID: 5791248197017790315, guid: 3e34f56d5a79f34469d2e6ce682ac839,
+        type: 3}
+      propertyPath: m_Enabled
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5791248197017790315, guid: 3e34f56d5a79f34469d2e6ce682ac839,
+        type: 3}
+      propertyPath: m_Center.y
+      value: 0.9527286
+      objectReference: {fileID: 0}
+    - target: {fileID: 5791248197017790315, guid: 3e34f56d5a79f34469d2e6ce682ac839,
+        type: 3}
+      propertyPath: m_Center.z
+      value: 0.011789799
+      objectReference: {fileID: 0}
+    - target: {fileID: 5791248197017790324, guid: 3e34f56d5a79f34469d2e6ce682ac839,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5791248197017790326, guid: 3e34f56d5a79f34469d2e6ce682ac839,
         type: 3}
