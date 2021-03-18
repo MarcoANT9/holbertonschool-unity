@@ -14,7 +14,7 @@ public class Timer : MonoBehaviour
     // Private Variables =============================================================
     //================================================================================
     private bool finished = false;
-    private float timernum = 0;
+    private float timernum = 0.0f;
 
     //================================================================================
     // Start is called before the first frame update =================================

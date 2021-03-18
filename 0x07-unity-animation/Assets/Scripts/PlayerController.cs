@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
@@ -17,6 +17,7 @@ public class PlayerController : MonoBehaviour
     //================================================================================
     private bool groundPlayer;
     private CharacterController pController;
+    private float fallTime = 0.0f;
     private float gravityValue;
     private Vector3 playerVelocity;
 
@@ -38,9 +39,25 @@ public class PlayerController : MonoBehaviour
         groundPlayer = pController.isGrounded;
         if (groundPlayer && playerVelocity.y < 0)
         {
+            //Falling Animation
+            ty.GetComponent<Animator>().SetBool("falling", false);
             playerVelocity.y = 0.0f;
         }
+        if (groundPlayer)
+            {
+                fallTime = 0.0f;
+                ty.GetComponent<Animator>().SetBool("falling", false);
+            }
+        else
+        {
+            fallTime += Time.deltaTime;
+            if (fallTime > 2.0)
+                //Falling Animation
+                ty.GetComponent<Animator>().SetBool("falling", true);
+                if (fallTime > 2)
+                    ty.GetComponent<Animator>().SetFloat("fallingTime", fallTime);
 
+        }
 
         // Player Movement
         Vector3 move = new Vector3(Input.GetAxisRaw("Horizontal"), 0f, Input.GetAxisRaw("Vertical")).normalized;
@@ -72,11 +89,12 @@ public class PlayerController : MonoBehaviour
         {
             ty.GetComponent<Animator>().SetBool("isJumping", true);
             playerVelocity.y += Mathf.Sqrt(jumpHeight * -3.0f * gravityValue);
-            //Jumping Animation play
         }
         else
             //Jumping Animation Stop
             ty.GetComponent<Animator>().SetBool("isJumping", false);
+
+
 
         playerVelocity.y += gravityValue * Time.deltaTime;
         pController.Move(playerVelocity * Time.deltaTime);

@@ -41,9 +41,9 @@ public class CameraController : MonoBehaviour
     {
         // Vertical Movement
         rotation = Quaternion.identity;
-        if (isInverted)
+        if (isInverted && Input.GetKey(KeyCode.Mouse1))
             rotation = Quaternion.AngleAxis(-Input.GetAxis("Mouse Y") * vert_speed * Time.deltaTime, Vector3.right);
-        else
+        else if (Input.GetKey(KeyCode.Mouse1))
             rotation = Quaternion.AngleAxis(Input.GetAxis("Mouse Y") * vert_speed * Time.deltaTime, Vector3.right);
         offset = rotation * offset;
         transform.position = target.position + offset;
@@ -51,8 +51,8 @@ public class CameraController : MonoBehaviour
         // Horizontal Movement
         if (Input.GetKey(KeyCode.Mouse1))
             rotation = Quaternion.AngleAxis(-Input.GetAxis("Mouse X") * turn_speed * Time.deltaTime, Vector3.up);
-        else
-            rotation = Quaternion.AngleAxis(Input.GetAxis("Mouse X") * turn_speed * Time.deltaTime, Vector3.up);
+        //else
+        //    rotation = Quaternion.AngleAxis(Input.GetAxis("Mouse X") * turn_speed * Time.deltaTime, Vector3.up);
 
         offset = rotation * offset;
         transform.position = target.position + offset;
