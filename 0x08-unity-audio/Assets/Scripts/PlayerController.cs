@@ -1,5 +1,5 @@
 using UnityEngine;
-using UnityEngine.UI;
+using UnityEngine.Audio;
 
 public class PlayerController : MonoBehaviour
 {
@@ -11,6 +11,7 @@ public class PlayerController : MonoBehaviour
     public float jumpHeight = 2.0f;
     public Transform cam;
     public GameObject ty;
+    public AudioSource runningGrass;
 
     //================================================================================
     // Private Variables =============================================================
@@ -68,6 +69,8 @@ public class PlayerController : MonoBehaviour
             //Vector3 movedir = Quaternion.Euler(0f, angle, 0f) * Vector3.forward;
             //Running Animation Play
             ty.GetComponent<Animator>().SetBool("isRunning", true);
+            if (groundPlayer)
+                runningGrass.Play();
             pController.Move(move.normalized * playerSpeed * Time.deltaTime);
         }
         else
