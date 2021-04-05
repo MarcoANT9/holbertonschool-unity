@@ -21,3 +21,40 @@ Create a static layout for the business card in a Unity scene called ARBusinessC
 You can find logos / icons for your buttons [here](https://intranet.hbtn.io/rltoken/V3OJK6Hh7Ugd94slQqkANw).
 
 Upload a screenshot of your business card layout, put the link in a text file named 0-layout, and submit the link to the form below.
+
+## Task 1. Target acquired
+Set up a target image database in Vuforia’s Target Manager and set up your AR marker such that your business card layout appears when your device’s camera detects the marker.
+
+The layout should be anchored to the marker and the layout’s transform values should change depending on the marker’s angle, pose, and distance in relation to the device’s camera. If the marker is not visible, all elements of the business card should disappear.
+
+## Task 2. Animated reality
+Add animations to your layout. The design and feel of the experience is up to you but keep in mind the overall user experience (text should be legible, buttons should be large enough to press individually, etc.)
+
+Be dynamic and play to the strengths of the AR medium — animation is key!
+
+## Task 3. Social link up
+Script the links to be interactive. When they are pressed on the device screen, they should open the associated link or app. The buttons should also give some kind of visual or audible feedback when pressed, such as the button changing color or a sound like a beep or click. Keep in mind [accessibility guidelines](https://intranet.hbtn.io/rltoken/hNgEW5XMsGvq2i-SF2DXKw) in your UI/UX decisions!
+
+## Task 4. Building cards
+Scenes in Build:
+
+* ARBusinessCard
+
+Create two builds of the business card scene in the Builds directory.
+
+Build Folder Hierarchy:
+
+* Builds
+    * iOS
+        * [Build files]
+    * Android
+        * ARBusinessCard.apk
+
+Make sure to run your build and make sure it works! Test your build on all platforms if possible, but at the very least test on your own device.
+
+Create a .zip of each build:
+
+* 0x09-unity-ar_business_card-iOS.zip
+* 0x09-unity-ar_business_card-Android.zip
+
+Upload the two .zip files to Google Drive or Dropbox. Add the links to the files below.
