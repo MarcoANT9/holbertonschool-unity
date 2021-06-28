@@ -13,7 +13,7 @@ You must be able to change the following properties of the shader in the Inspect
 * Glow color
 * Glow strength
 
-![Image1](https://holbertonintranet.s3.amazonaws.com/uploads/medias/2019/4/b6589fc6ab0dc82cf120.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIARDDGGGOUWMNL5ANN%2F20210626%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20210626T013615Z&X-Amz-Expires=86400&X-Amz-SignedHeaders=host&X-Amz-Signature=8b46c172089512b82956fd32c540c5a594868be2971c00a15b0b272935148af2)
+![Image1](C:\Users\MarcoA\Downloads)
 
 #### 1. Pulse
 Based on the previous shader, create a new shader where the glow pulses / fades in and out.
