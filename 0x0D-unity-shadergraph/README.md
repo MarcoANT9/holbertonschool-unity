@@ -13,8 +13,6 @@ You must be able to change the following properties of the shader in the Inspect
 * Glow color
 * Glow strength
 
-![Image1](C:\Users\MarcoA\Downloads)
-
 #### 1. Pulse
 Based on the previous shader, create a new shader where the glow pulses / fades in and out.
 
@@ -26,7 +24,6 @@ You must be able to change the following properties of the shader in the Inspect
 * Maximum glow strength
 * Pulse frequency
 
-![Image2](https://holbertonintranet.s3.amazonaws.com/uploads/medias/2019/4/356a192b7913b04c5457.gif?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIARDDGGGOUWMNL5ANN%2F20210626%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20210626T013615Z&X-Amz-Expires=86400&X-Amz-SignedHeaders=host&X-Amz-Signature=e70b85c9150e2ad24873cbd3eaa87758e61abd6dd658e93025b48e6915e477f2)
 
 #### 2. Mr. Stark, I don't feel so good
 Create a shader that simulates a disintegrating or dissolving effect.
