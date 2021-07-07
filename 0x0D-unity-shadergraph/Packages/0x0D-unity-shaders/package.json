@@ -1,0 +1,17 @@
+{
+  "name": "unity-shaders",
+  "version": "1.0.0",
+  "displayName": "Custom Shader Pack",
+  "description": "This is a package for the 0x0D. Unity - ShaderGraph project at Holberton School",
+  "unity": "2019.4",
+  "unityRelease": "17f1",
+  "keywords": [
+    "Glow",
+    "Disintegrate",
+    "Hologram"
+  ],
+  "author": {
+    "name": "Marco Antonio Ni\ufffdo Calder\ufffdn",
+    "email": "acalde27@hotmail.com"
+  }
+}

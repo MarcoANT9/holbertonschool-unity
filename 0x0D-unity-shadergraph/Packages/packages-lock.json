@@ -94,6 +94,12 @@
         "com.unity.modules.imgui": "1.0.0"
       }
     },
+    "unity-shaders": {
+      "version": "file:0x0D-unity-shaders",
+      "depth": 0,
+      "source": "embedded",
+      "dependencies": {}
+    },
     "com.unity.modules.ai": {
       "version": "1.0.0",
       "depth": 0,
